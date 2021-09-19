@@ -28,6 +28,10 @@ e2fsck =
 
 mke2fs = 
 
+tune2fs
+O comando "tune2fs" é usado pelo administrador do sistema para alterar / modificar parâmetros ajustáveis ​​em ext2, ext3 e ext4 tipo sistemas de arquivos. Para exibir os valores atuais que estão definidos você pode usar o comando tune2fs com a opção "-l" ou usar o comando dumpe2fs.
+
+
 tune2fs = utilizado para definir parametros de terminada partição Ex:
 
 tune2fs -L "partição teste" /dev/sdc1 =  você definiu a flag partição teste
