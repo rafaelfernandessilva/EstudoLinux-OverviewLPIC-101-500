@@ -1,0 +1,46 @@
+104.2 Maintain the integrity of filesystems
+Partial list of the used files, terms and utilities
+
+du = comando utilizado para verificar tamanho de pastas/arquivos
+
+du -h = vai exibir em um formato "human-readable" no qual mostra o tamanho em formato KB/MB/GB/TB etc..
+
+du -s = faz um sumario e exibe o total de espaço em disco somando todos os arquivos/pastas 
+Ex:. du -sh /home
+Vai fazer a soma de tudo que esta no diretorio e trazer o total na tela 
+
+du -d = imprime o total para um diretório (ou arquivo, com --all) apenas se for N ou menos níveis abaixo do comando
+
+
+df = Comando utilizado para ver o espaço em disco das partições. O mesmo é geralmente utilizado com a opção -h (human-readable) no qual exibe o tamanho das partições em MB/GB/TB.
+
+df -h = exibe o tamanho de cara partição
+
+df -hT  = exibe o filesystem utilizado, e também o tamanho 
+
+df -ht [filesystem] Ex:. df -ht ext3 =  vai exibir apenas as partições no qual possui ext3
+
+df -i = mostra a quantidade de inode. Muita das vezes podemos ter mensagem de "diskfull", mesmo com o espaço em disco sobrando, mas a quantidade de inodes foi esgotada. 
+
+fsck = utilizado para reparar o disco
+
+e2fsck = 
+
+mke2fs = 
+
+tune2fs = utilizado para definir parametros de terminada partição Ex:
+
+tune2fs -L "partição teste" /dev/sdc1 =  você definiu a flag partição teste
+
+tune2fs -i 1m /dev/sdc1 = definir que a cada 1 mês vai rodar o fsck
+
+tune2fs -c 30 /dev/sdc1 = definiu que a cada 30 montagem de disco vai executar um fsck
+
+tune2fs -j /dev/sdc1 = adiciona o journal na partição
+
+
+xfs_repair = utilizado para reparar o disco semelhante ao fsck
+
+xfs_fsr = vai reorganizar o disco, uma especie de desfragamentação do windows
+
+xfs_db = para debugar uma partição com xfs

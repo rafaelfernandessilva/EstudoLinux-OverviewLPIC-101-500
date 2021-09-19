@@ -1,0 +1,50 @@
+104.5 Manage file permissions and ownership
+Partial list of the used files, terms and utilities
+
+Atributos especiais / Bits de modos de acesso 
+SUID =  Faz com que o script execute com as permissões do dono, ao invés de executar com a permissão de quem esta executando Ex:. sintaxe
+chmod u+s scripts.sh 
+
+
+SGID = Faz com que o script execute com as permissões do grupo ao invés de executar com permissão de quem esta executando. Ex:
+chmod g+s scripts.sh
+
+
+Sticky = Esse atributo especial faz com que apenas quem criou o arquivo consegue apagar o mesmo, independente das ourtas permissões. 
+
+SUID	SGID	Stick
+2^2	2^1	2^0
+4	2	1
+
+Para atribuir basta dar a permissão Ex:. 
+chmod 4775 scripts.sh =  vai definir SUID no arquivo scripts.sh
+
+
+chmod = Comando utilizado para realizar a alteração da permisão do dono/grupo/outros existe duas sintaxes para realizar esse procedimento. 
+ALVO		Operação		Permissão 
+u = user	+ = adicionar		r - read 
+g = group	- = remover		w - write
+o = others	= = igual		x - execute
+a = all  
+
+Ex:. SINTAXE 1 
+chmod g-w scripts.sh = removeu a permissão de escrita (w) para o grupo
+chmod a+x scripts.sh = adicionou permissão de execuçaõ (x) para todos
+chmod ug+rw scripts.sh = adicionou permissão de leitura(w) e execução(x) para o usuario e grupo
+chmod o=rw scripts = vai deixar o outros (o) com leitura e escrita 
+
+Ex:. SINTAXE 2 MODO OCTAL
+
+r	w	x
+2^2 	2^1	2^0 
+4  	2 	1
+
+chmod 644 scripts.sh = rw-r-r
+chomd 775 scripts.sh = rwxrwxr-x
+chmod 774 scripts.sh = rwxrwxr--
+
+umask = 
+
+chown = 
+
+chgrp = 

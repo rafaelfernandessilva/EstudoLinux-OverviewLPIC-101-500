@@ -1,0 +1,59 @@
+103.8 Basic file editing
+O vim tem 3 modos operação
+
+vi:
+
+1º navegação que é assim que vc entra no arquivo, você pode navegar no arquivo mas sem editar o mesmo 
+
+2º inserção/edição no qual você pode modificar o arquivo 
+
+3º modo de comando
+
+/ = Ao digitar 
+
+? = 
+
+h = move o cursor 
+
+l = proximo
+
+j = desce proxima
+
+k = sobe
+
+i = começa a inserir no local onde o cursor se encontra
+
+o = começa a inserir na linha abaixo
+
+O = começa a inserir na linha acima
+
+A = começa a inserir no final da linha
+
+cc = recortar a linha deseja e já entrar no modo inserção logo em seguida
+
+p = vai copiar a linha deseja onde o cursor se encontra
+
+dd = vai recordar a linha onde o cursor se encontra
+
+d[nº linhas]d = o comando d[nº linhas]d vai recortar o numero de linha informado Ex: d10d vai recortar 10 linhas
+
+yy = copia a linha desejada
+
+y[nº linhas]y = vai copiar o numero de linha desejadas Ex: y10y vai copiar as 10 linhas do arquivo
+
+:w = vai salvar o conteúdo editado
+
+:q! = vai sair sem salvar
+
+:wq = vai salvar o conteúdo editado e sair do arquivo
+
+:x = sair e salvar
+
+:wq! = vai forçar o sair e salvar, mesmo que apareça algum warning ele vai salvar o conteúdo e sair
+
+ZZ = vai sair e salvar
+
+:![COMANDO] = Caso você queira digitar algum comando sem sair do editor basta utilizar o :! por exemplo você deseja listar as pastas do /home sem sair do editor Ex:
+!ls -lhat /home/
+
+:e = vai atualizar o editor, caso alguém também esteja editando ao mesmo tempo que você
