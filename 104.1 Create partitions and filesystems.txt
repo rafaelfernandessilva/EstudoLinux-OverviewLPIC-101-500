@@ -1,0 +1,43 @@
+104.1 Create partitions and filesystems
+Weight: 2
+
+Description: Candidates should be able to configure disk partitions and then create filesystems on media such as hard disks. This includes the handling of swap partitions.
+
+Key Knowledge Areas:
+
+Manage MBR and GPT partition tables
+Use various mkfs commands to create various filesystems such as:
+
+
+ext2 =  filesystem original Linux
+ext3 = é o ext3 com journal
+ext4 = evolução do ext4
+XFS = Criado pela SGI para IRIX
+VFAT = Utilizado em sistemas Windows
+exFAT = exTended Fat ou FAT64. Sistema de arquivo otimizado para pendrive, cartão de memoria. 
+	- Intermediario entre FAT e NTFS
+	- Mais simples que NTFS
+	- Permite arquivos maiores que o FAT
+	- No FAT o limite é 4GB, no exFAT é 16exabyte (EB)
+	- No linux é implementado pelos pacotes exfat-fuse e exfat-utils
+
+Basic feature knowledge of Btrfs, including multi-device filesystems, compression and subvolumes.
+Btrfs = B-tree File System
+* FileSystem mais atual 
+* Foco na tolerância de falhas e facilidade de administração
+* Desenvolvido por um grupo de empresas: Oracle, Red Hat, Intel, SUSE, Facebook etc..
+
+Btrfs - Recursos
+* mult-devices filesystem / Raid
+	- suporte raid 0,1,10(5 e 6 ainda em desenvolvimento)
+* SubVolumes
+	- Estrutura dentro de uma partição/volume
+	- Pode ser montado separadamente 
+
+* Compressão Transparente
+	- compressão pode ser feita diretamente no FS
+	- Algoritimo zlib, LZO, ZSTD
+* Snapshot
+	- um snapshot do sistema de arquivos uma pic diaria do sistema de arquivos em determinados momentos
+
+* Conversão de ext3 para btrfs
